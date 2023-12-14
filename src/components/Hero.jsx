@@ -1,6 +1,6 @@
-// Hero.js
 import React from "react";
 import { FaApple } from "react-icons/fa";
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 const Hero = () => {
   return (
@@ -45,39 +45,23 @@ const Hero = () => {
           src="https://framerusercontent.com/images/qmU7tgmwRQ3dXL9yHkp9GDxbrv0.svg"
           alt="Hero Image"
         />
-        <div
-          className="bg-white text-black-500 rounded-full border border-black-500 py-2 px-4 mt-2 text-center"
-          style={{ width: "230px", margin: "80px 0" }}
-        >
+        <div className="bg-white text-black-500 rounded-full border border-black-500 py-2 px-4 mt-12 text-center w-64">
           Financial Management
         </div>
         <div className="text-black text-left mt-2 ml-5">
-          <div
-            style={{
-              fontSize: "65px",
-              fontWeight: "bold",
-              marginBottom: "0px",
-            }}
-          >
-            A simpler,
+          <div className="text-8xl font-medium py-2">A simpler,</div>
+          <div className="text-8xl font-medium py-2">smarter basic</div>
+          <div className="text-8xl font-medium py-2">
+            credit{" "}
+            <span className="bg-gradient-to-r from-indigo-200 to-sky-600 bg-clip-text text-transparent">
+              card.
+            </span>
           </div>
-          <div
-            style={{
-              fontSize: "65px",
-              fontWeight: "bold",
-              marginBottom: "0px",
-            }}
-          >
-            smarter basic
-          </div>
-          <div style={{ fontSize: "65px", fontWeight: "bold" }}>
-            credit card.
-          </div>
-          <h5>
+          <h5 className="py-4">
             Your powerful companion on the road to financial success! Explore
-            <h5>personal budget management, investment opportunities.</h5>
+            personal budget management, investment opportunities.
           </h5>
-          <div class="flex space-x-4 p-4 rounded-md">
+          <div className="flex space-x-4 py-4 rounded-md">
             <button className="bg-black text-white rounded-full px-6 py-3 mr-4 mb-4 w-90 flex items-center">
               <div className="flex items-center">
                 <FaApple className="mr-2" />
@@ -115,11 +99,14 @@ const Hero = () => {
 
       {/* Right Section (Login and Button) */}
       <div className="absolute top-0 right-0 p-4">
-        <button className="bg-gradient-to-r from-white via-gray-300 to-black text-black-500 rounded-full px-6 py-2 mr-4 mb-4 hover:bg-black hover:text-white">
+        <button className="bg-gradient-to-r from-indigo-200 AAF7F3 to-transparent text-black-500 rounded-full px-6 py-2 mr-4 mb-4 hover:bg-black hover:text-white">
           Login
         </button>
-        <button className="bg-white text-blue-500 rounded-full px-6 py-2 mb-4 hover:bg-blue-500 hover:text-white">
-          Let's Talk
+        <button className="bg-black text-white rounded-full px-6 py-2 mb-4">
+          <div className="flex items-center">
+            <span>Let's Talk</span>
+            <MdOutlineArrowOutward className="mr-2" />
+          </div>
         </button>
       </div>
     </div>
