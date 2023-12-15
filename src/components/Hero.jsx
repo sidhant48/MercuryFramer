@@ -1,8 +1,8 @@
+import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
 import { FaApple } from "react-icons/fa";
-import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaAngleDown } from "react-icons/fa6";
-import { motion, useAnimation } from "framer-motion";
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 const Hero = () => {
   const controls = useAnimation();
@@ -54,7 +54,7 @@ const Hero = () => {
 
       {/* Mobile Image */}
       <motion.div
-        className="absolute top-1/8 left-2/3 transform -translate-x-1/2 -translate-y-1/4 mobile-image-container max-h-64"
+        className="absolute top-1/8 left-2/4 transform -translate-x-1/2 -translate-y-1/4 mobile-image-container max-h-64"
         initial="hidden"
         animate={controls}
         variants={variants}
