@@ -14,20 +14,20 @@ const Hero = () => {
 
   useEffect(() => {
     controls.start("visible");
-  }, [controls]);
+  }, []);
   return (
     <div className="relative h-screen flex flex-col items-center justify-center">
       {/* White background for the left side (extended to cover 15% more) */}
       <div className="absolute top-0 left-0 w-2/3 h-full bg-white rounded-l-md"></div>
 
       {/* Gradient background for the right half with rounded edges */}
-      <div
-        className="absolute top-0 right-0 w-1/3 h-full rounded-2xl"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom right, #AAF7F3 30%, #FFFF8C, #A3A3FF, #8BEEF1 )",
-        }}
-      ></div>
+      <motion.div
+        className="absolute top-0 right-0 w-1/3 h-full rounded-2xl bg-gradient-to-br from-teal-300 via-yellow-100 to-indigo-300"
+        initial="hidden"
+        animate={controls}
+        variants={variants}
+        transition={{ duration: 3.5 }} // Adjust the duration as needed
+      ></motion.div>
 
       {/* Navigation Options */}
       <div className="text-black py-4 text-center absolute top-0 left-0 w-full">
