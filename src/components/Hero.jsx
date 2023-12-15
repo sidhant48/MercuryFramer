@@ -26,7 +26,7 @@ const Hero = () => {
         initial="hidden"
         animate={controls}
         variants={variants}
-        transition={{ duration: 3.5 }} // Adjust the duration as needed
+        transition={{ duration: 1.5 }} // Adjust the duration as needed
       ></motion.div>
 
       {/* Navigation Options */}
@@ -53,13 +53,19 @@ const Hero = () => {
       </div>
 
       {/* Mobile Image */}
-      <div className="absolute top-1/8 left-3/4 transform -translate-x-2/3 -translate-y-1/4 mobile-image-container max-h-64 ">
+      <motion.div
+        className="absolute top-1/8 left-2/3 transform -translate-x-1/2 -translate-y-1/4 mobile-image-container max-h-64"
+        initial="hidden"
+        animate={controls}
+        variants={variants}
+        transition={{ delay: 0.5, duration: 1.5, ease: "easeOut" }}
+      >
         <img
-          className="min-w-full max-h-164" // Adjust the width and max-height as needed
+          className="w-96 max-h-164"
           src="https://framerusercontent.com/images/1JFj3FwlaG94oqSBTQUOdyY6nHA.png?scale-down-to=1024"
           alt="Mobile Image"
         />
-      </div>
+      </motion.div>
 
       {/* Left Section (Image) */}
 
